@@ -71,3 +71,8 @@ for (i = 0; i < acc.length; i++) {
 
 
 
+//// Animation
+const animationdiv=document.getElementById("loader")
+window.addEventListener("load",function(){
+  animationdiv.className+=" hidden"
+})

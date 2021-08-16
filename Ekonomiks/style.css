@@ -63,8 +63,8 @@ body{
   width: 0;
   position: fixed;
   z-index: 1;
-  top: 0;
   left: 0;
+  top: 0;
   overflow-x: hidden;
   transition: 0.4s all;
 }
@@ -1247,6 +1247,45 @@ line-height: 160%;
 .bigfont {
   font-size: 24px !important;
 }
+
+/*--------------Animation Start-------------*/
+.documentAnimation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+.logoAnimation{
+  animation: rotate infinite 0.7s forwards;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.documentAnimation.hidden{
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/*--------------Animation End-------------*/
+
 /*--------------Hamburger Menu Start---------------*/
 
 #togglemenuicon{
